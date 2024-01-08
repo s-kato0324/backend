@@ -1,0 +1,25 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:947106514667:task-definition/cfn-todo-backend:26",
+  "containerDefinitions": [
+    {
+      "name": "cfn-task-definition",
+      "image": "<IMAGE1_NAME>",
+      "portMappings": [
+        {
+          "name": "todo-backend-port-3000",
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "family": "cfn-todo-backend",
+  "taskRoleArn": "arn:aws:iam::947106514667:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::947106514667:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "cpu": "1024",
+  "memory": "3072"
+}
